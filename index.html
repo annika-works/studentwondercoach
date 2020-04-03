@@ -12,10 +12,10 @@
   <body>
     <header>
         <nav>
-            <a href="#warum">Warum Coaching?</a>
-            <a href="#leistungen">Leistungen</a>
-            <a href="#fragen">Fragen?</a>
-            <a href="#kontakt">Schreib mir</a>
+            <a id='warum-link' href="#warum">Warum Coaching?</a>
+            <a id='leistungen-link' href="#leistungen">Leistungen</a>
+            <a id='fragen-link' href="#fragen">Fragen?</a>
+            <a id='kontakt-link' href="#kontakt">Schreib mir</a>
         </nav>
     </header>
     <div class="wrapper hero intro-section" id="warum">
@@ -107,21 +107,22 @@
     <div class="hero" id="kontakt">
         <div class="contact-profile">
             <img src="./assets/images/profile.png">
-            <div>
-                <h2>Brauchst du Hilfe bei deiner wissenschaftlichen Arbeit?</h2>
+            <img src="./assets/images/vector-5.svg" style="position: absolute; transform: translateX(-50px);">
+            <div class="contact-intro">
+                <h1>Brauchst du Hilfe bei deiner wissenschaftlichen Arbeit?</h1>
                 <p>Schreib mir einfach eine Nachricht und beschreibe dein Problem, ich rufe dich zurück!</p>
             </div>
         </div>
         <div class="form">
             <form name="htmlform" method="post" action="html_form_send.php">
-                <table width="450px">
+                <table>
                 </tr>
                 <tr>
                  <td valign="top"">
                   <label for="name">Name *</label>
                  </td>
                  <td valign="top">
-                  <input  type="text" name="name" maxlength="50" size="30">
+                  <input type="text" name="name">
                  </td>
                 </tr>
                 <tr>
@@ -129,7 +130,7 @@
                   <label for="email">E-Mail Adresse *</label>
                  </td>
                  <td valign="top">
-                  <input  type="text" name="email" maxlength="80" size="30">
+                  <input type="text" name="email">
                  </td>
                  
                 </tr>
@@ -138,7 +139,7 @@
                   <label for="telephone">Telefon</label>
                  </td>
                  <td valign="top">
-                  <input  type="text" name="telephone" maxlength="30" size="30">
+                  <input type="text" name="telephone">
                  </td>
                 </tr>
                 <tr>
@@ -146,12 +147,12 @@
                   <label for="comments">Deine Nachricht *</label>
                  </td>
                  <td valign="top">
-                  <textarea  name="comments" maxlength="1000" cols="30" rows="6"></textarea>
+                  <textarea name="comments" rows="6"></textarea>
                  </td>
                  
                 </tr>
                 <tr>
-                 <td colspan="2">
+                 <td class="button" colspan="2">
                   <input type="submit" value="Absenden">   
                  </td>
                 </tr>
