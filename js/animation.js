@@ -1,5 +1,19 @@
+var bodyTag = document.querySelector('body')
+var hamburger = document.querySelector(".hamburger");
+var mobilemenu = document.querySelector(".mobile-wrapper");
+var mobilecontent = document.querySelector(".mobile-container");
+var navlinks = document.querySelectorAll('nav.mobile a');
+var logoTag = document.querySelector('div.logo-container');
+
+
+document.addEventListener("DOMContentLoaded", event => {
+  window.scrollTo(0, 0);
+});
+
 const runScripts = () => {
     const headers = document.querySelectorAll('h1, .intro, .vfz')
+    
+    
 
     const observer = new IntersectionObserver(
       entries => {
@@ -25,16 +39,9 @@ const runScripts = () => {
   runScripts()
 
 
-// toggle mobile
+// mobile menu
 
-var bodyTag = document.querySelector('body')
-var hamburger = document.querySelector(".hamburger");
-var mobilemenu = document.querySelector(".mobile-wrapper");
-var mobilecontent = document.querySelector(".mobile-container");
-var navlinks = document.querySelectorAll('nav.mobile a');
-var logoTag = document.querySelector('div.logo-container');
-
-hamburger.addEventListener("click", function() {
+hamburger.addEventListener("click", () => {
   mobilemenu.classList.toggle("slide-in");
 
   if(mobilemenu.classList.contains('slide-in')) {
@@ -73,3 +80,21 @@ navlinks.forEach( link => {
   })
 });
 
+
+// var navheadlinks = document.querySelectorAll('header nav a')
+  
+//   navheadlinks.forEach(navlink => {
+//     navlink.addEventListener('click', () => {
+//       if (this.classList.contains('selected')) {
+//           document.querySelector('header nav a.selected').classList.remove('selected')
+//           this.classList.add('selected')
+//       }
+//     })
+
+//   })
+  
+  
+  // if (navheadlinks.classList.contains('selected')) {
+  //   document.querySelector('header nav a.selected').classList.remove('selected')
+  //   this.classList.add('selected')
+  // }
