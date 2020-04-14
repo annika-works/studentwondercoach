@@ -10,10 +10,9 @@
     --white: #fff;
     --black: #000;
     --black-light: #1C1717;
-    --green: #00de9b;
+    --green: #0dd08f;
     --red: #de0025;
     --blue: #00c8de;
-    --bluelll: #65C8D0;
     --blue-dark: #7FE3EE;
 
     --timing: cubic-bezier(0.23, 1, 0.32, 1);
@@ -58,19 +57,6 @@
     }
   }
 
-  @keyframes slideOut {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-100%);
-    }
-    100% {
-      top: -100%;
-    }
-  }
-
-
 body {
     color: var(--black);
     font-family: 'Karla', sans-serif;
@@ -99,21 +85,13 @@ h3 {
     opacity: 0;
     animation-name: fadeIn;
     animation-duration: 3s;
-    /* animation-delay: 2s; */
-      /* die settings in der animation bleiben  */
     animation-fill-mode: forwards;
   }
 
-  .slide-in {
+.slide-in {
     opacity: 1;
     animation-name: slideIn;
     animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.slide-out {
-    animation-name: slideOut;
-    animation-duration: 5s;
     animation-fill-mode: forwards;
 }
 
@@ -161,7 +139,6 @@ nav.mobile {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20%;
-
 }
 
 nav.mobile a {
@@ -283,6 +260,10 @@ nav.mobile a:hover {
 
   /*  header area  */
 
+header {
+    border-bottom: 1px solid var(--white);
+}
+
 header,
 footer {
     position: fixed;
@@ -300,6 +281,7 @@ footer {
     bottom: 0;
     top: auto;
     position: relative;
+    border-top: 1px solid var(--white); 
 }
 
 header nav,
@@ -372,7 +354,7 @@ footer nav a:hover {
 
 .logo-container-mobile {
     position: fixed;
-    padding: 20% 10%;
+    padding: 10% 10% 0 10%;
     top: 0;
 }
 
@@ -416,18 +398,6 @@ li:last-child {
 .v1 {
     transform: translate(-50px,-10px);
     opacity: 1;
-}
-
-.v2 {
-    transform: translateX(-40px);
-}
-
-.v4 {
-    transform: translate(-30px,-60px);
-}
-
-.v5 {
-    transform: translate(-60px,-15px);
 }
 
 .v6 {

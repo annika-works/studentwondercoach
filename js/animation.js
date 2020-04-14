@@ -6,14 +6,12 @@ var navlinks = document.querySelectorAll('nav.mobile a');
 var logoTag = document.querySelector('div.logo-container');
 
 
-document.addEventListener("DOMContentLoaded", event => {
+window.onbeforeunload = () => {
   window.scrollTo(0, 0);
-});
+}
 
 const runScripts = () => {
     const headers = document.querySelectorAll('h1, .intro, .vfz')
-    
-    
 
     const observer = new IntersectionObserver(
       entries => {
@@ -21,9 +19,6 @@ const runScripts = () => {
           if (entry.intersectionRatio >= 0.1) {
             entry.target.classList.add('appear')
           }
-            // else {
-          //   entry.target.classList.remove('appear')
-          // }
         })
       },
       {
@@ -48,7 +43,6 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.add("is-active");
     mobilecontent.classList.add("appear");
     bodyTag.style.overflow = 'hidden';
-    // window.scrollTo(0, 0);
 
     if(window.pageYOffset > 0) {
 
@@ -56,7 +50,6 @@ hamburger.addEventListener("click", () => {
         logoTag.classList.add('logo-container-mobile')
         document.querySelector('div.logo-container img').classList.add("appear");
       }, 500)
-      // logoTag.classList.add('logo-container-mobile')
     };
 
   } else {
@@ -80,21 +73,3 @@ navlinks.forEach( link => {
   })
 });
 
-
-// var navheadlinks = document.querySelectorAll('header nav a')
-  
-//   navheadlinks.forEach(navlink => {
-//     navlink.addEventListener('click', () => {
-//       if (this.classList.contains('selected')) {
-//           document.querySelector('header nav a.selected').classList.remove('selected')
-//           this.classList.add('selected')
-//       }
-//     })
-
-//   })
-  
-  
-  // if (navheadlinks.classList.contains('selected')) {
-  //   document.querySelector('header nav a.selected').classList.remove('selected')
-  //   this.classList.add('selected')
-  // }
